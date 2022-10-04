@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import {InputGroup, Form} from 'react-bootstrap'
 import {BiSearchAlt} from 'react-icons/bi'
+import { useQuery } from "react-query";
 import Gallery from "../../Components/Gallery/Gallery";
+import { API } from "../../config/Api";
 
 function Home() {
+  const [dataFilter, setDataFilter] = useState([])
+
+
+  const { data: gallery } = useQuery("galleryCache", async () => {
+    const response = await API.get("/posts");
+    console.log("response : ", response);
+
+    return response.data.data;
+  });
+
+  function handleChangeLiterature(e) {
+    if (!e.target.value) { 
+      setDataFilter(gallery); 
+      return;
+    }
+    const filter = gallery?.filter((item) => {
+      return item.title.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+    setDataFilter(filter);
+  }
+
+  useEffect(() => {
+    if (gallery) setDataFilter(gallery);
+  }, [gallery]);
+
   return (
     <>
     
@@ -33,6 +61,7 @@ function Home() {
           aria-label="Search"
           aria-describedby="basic-addon1"
           style={{border:"none", backgroundColor:"#E7E7E7"}}
+          onChange={handleChangeLiterature}
         />
       </InputGroup>
 
@@ -41,7 +70,7 @@ function Home() {
 
     <h3 className="ps-5 fs-5">Today Post</h3>
 
-    <Gallery />
+    <Gallery gallery={dataFilter}/>
     </>
   );
 }

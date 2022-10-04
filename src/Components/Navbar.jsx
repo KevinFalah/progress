@@ -8,6 +8,7 @@ import LogoWaysGallery from '../Components/Images/logoWaysGallery.png'
 import profileDropdown from '../Components/Images/profileDropdown.png'
 import {UserContext} from '../context/UserContext'
 import { useContext } from 'react';
+import ProfileUser from '../Components/Images/detailProfile.png'
 
 function Navbar() {
 
@@ -53,7 +54,7 @@ function Navbar() {
                 <img
                   width={40}
                   height={40}
-                  src={profileDropdown}
+                  src={ProfileUser}
                   style={{ borderRadius: "100%", objectFit: "cover" }}
                   alt="user"
                 />
@@ -64,7 +65,7 @@ function Navbar() {
                   <FaUser className="ms-2 me-1 fs-4" style={{color:"#2FC4B2"}} />
                   Profile
                 </Dropdown.Item>
-                <Dropdown.Item as={Link} to="/payment" className='fw-bold text-dark'>
+                <Dropdown.Item as={Link} to="/order" className='fw-bold text-dark'>
                   <BsJournalBookmarkFill className="ms-2 fs-4" style={{color:"#00E016"}}/> Order
                 </Dropdown.Item>
                 <Dropdown.Divider className="bg-light dropDivid" />

@@ -38,7 +38,8 @@ export const Styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: "50px",
+    padding: "0px",
     margin: "0px 10px",
+    height:"150px"
   },
 };

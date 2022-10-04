@@ -13,3 +13,201 @@ input[type="file"] {
   background-size: cover;
   height: 100vh;
 }
+
+/* All Table  */
+.the-container {
+  display: flex;
+  position: relative;
+  margin: auto;
+  flex-direction: column;
+  padding: 30px 150px;
+  font-size: 13px;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 10px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  /* background: grey; */
+  margin-bottom: 30px;
+}
+
+
+.the-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #828282;
+}
+
+.the-table th,
+td {
+  border: 1px solid #828282 !important;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.the-table th {
+  font-weight: bold;
+  background-color: #E5E5E5 !important;
+}
+
+/* Button and Font  */
+.btn-full {
+  color: #fff;
+  background-color: #2fc4b2 !important; 
+  border: none !important;
+  font-weight: bold !important;
+  width: 100%;
+}
+
+.btn1 {
+  color: #fff;
+  background-color: #2fc4b2 !important; 
+  border: none !important;
+  font-weight: bold !important;
+  width: 100px;
+}
+
+.btn2 {
+  color: #000000  !important;
+  background-color: #E7E7E7 !important; 
+  border: none !important;
+  font-weight: bold !important;
+  width: 100px;
+}
+
+.btn3 {
+  color: #fff;
+  background-color: #0ACF83 !important; 
+  border: none !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  height: 20px;
+  width: 80px;
+}
+
+.btn4 {
+  color: #fff;
+  background-color: #FF0742 !important; 
+  border: none !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  height: 20px;
+  width: 00px;
+}
+
+.btn5 {
+  color: #fff;
+  background-color: #0ACF83 !important; 
+  border: none !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  height: 20px;
+  width: 100px;
+}
+
+.bold {
+  color: #000000  !important;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.thin {
+  color: #000000  !important;
+  font-size: 16.5px;
+}
+
+.title {
+  color: #2fc4b2 !important; 
+  font-weight: bold !important;
+  text-decoration: none !important;
+}
+
+/* Form  */
+.form {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.formC {
+  border: 2px solid #2fc4b2 !important;
+  border-radius: 8px !important;
+}
+
+.form1 {
+  margin-left: 100px;
+}
+
+/* Edit Profile  */
+.box {
+  box-sizing: border-box !important;
+
+  position: absolute !important;
+  width: 600px !important ;
+  height: 370px !important ;
+  left: 150px !important ;
+  top: 130px !important ;
+
+  border: 5px dashed #B2B2B2 !important ;
+  border-radius: 5px !important ;
+}
+
+.round {
+  box-sizing: border-box !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px !important;
+  height: 150px !important;
+
+  border: 5px dashed #B2B2B2 !important;
+  border-radius: 50% !important ;
+
+  margin: auto;
+}
+
+/* Dropdown */
+.dd-size {
+  height: 27px;
+  width: 110px;
+  font-size: 13px !important;
+}
+
+#dropdown-basic::after{
+  display: none; 
+}
+
+#dropdown-face::after {
+  display: none;
+}
+
+.galImage {
+  transition: .5s;
+}
+
+.galImage:hover {
+  filter: brightness(.5);
+}
+
+@media (max-width: 758px) {
+  .the-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .formUpload {
+    flex-wrap: wrap;
+  }
+}

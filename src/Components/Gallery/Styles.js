@@ -4,7 +4,7 @@ export const Styles = {
         margin: "20px auto"
     },
     imgContainer: {
-        columns: "3 250px",
+        columns: "5 250px",
         gap: "15px"
     },
     image: {
